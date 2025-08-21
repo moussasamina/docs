@@ -1,0 +1,96 @@
+<h1 id="amazon-product-images-downloader">Amazon Product Images Downloader</h1>
+<p>
+  Un script Python qui permet de télécharger toutes les images d’un produit
+  Amazon (y compris celles de ses variantes).
+</p>
+<h2 id="-pr-requis">⚙️ Prérequis</h2>
+<ul>
+  <li><strong>Python</strong> : &gt;=3.10</li>
+  <li>
+    <strong>Terminal Unix</strong> (ex : Git Bash sur Windows, ou terminal
+    Linux/Mac)
+  </li>
+</ul>
+<h2 id="-r-cup-ration-du-projet">📥 Récupération du projet</h2>
+<ol>
+  <li>
+    <p>Clone le projet depuis GitHub :</p>
+    <pre><code class="lang-bash">git <span class="hljs-keyword">clone</span> <span class="hljs-title">-b</span> download/product-images https://github.com/Saminatechno/YoobuAiBack.git amazon-image-downloader
+</code></pre>
+  </li>
+  <li>
+    <p>Entre dans le dossier :</p>
+    <pre><code class="lang-bash">cd amazon-<span class="hljs-built_in">image</span>-downloader
+</code></pre>
+  </li>
+  <li>
+    <p>Crée un environnement virtuel :</p>
+    <pre><code class="lang-bash"><span class="hljs-attribute">python -m venv venv</span>
+</code></pre>
+  </li>
+  <li>
+    <p>Active l’environnement virtuel :</p>
+    <ul>
+      <li>
+        <p><strong>Windows (Git Bash)</strong> :</p>
+        <pre><code class="lang-bash"><span class="hljs-keyword">source</span> venv<span class="hljs-regexp">/Scripts/</span>activate
+</code></pre>
+      </li>
+      <li>
+        <p><strong>Linux/Mac</strong> :</p>
+        <pre><code class="lang-bash"><span class="hljs-keyword">source</span> venv<span class="hljs-regexp">/bin/</span>activate
+</code></pre>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Installe les dépendances :</p>
+    <pre><code class="lang-bash">pip <span class="hljs-keyword">install</span> -r requirements.txt
+</code></pre>
+  </li>
+</ol>
+<h2 id="-utilisation">▶️ Utilisation</h2>
+<ol>
+  <li>
+    <p>Lance le programme :</p>
+    <pre><code class="lang-bash"><span class="hljs-keyword">python</span> downloader.<span class="hljs-keyword">py</span>
+</code></pre>
+  </li>
+  <li>
+    <p>
+      Copie l’URL d’une page produit Amazon exemple :
+      <code>https://www.amazon.fr/Acer-CB317-1H-C7TP/dp/B0BPY9ZJX6/?th=1</code>
+    </p>
+  </li>
+  <li>
+    <p>Colle l’URL dans le terminal et appuie sur <strong>Entrée</strong>.</p>
+  </li>
+  <li>
+    <p>
+      Le script télécharge automatiquement toutes les images du produit et de
+      ses variantes dans un dossier dédié.
+    </p>
+  </li>
+</ol>
+<h2 id="-r-sultats">📂 Résultats</h2>
+<ul>
+  <li>
+    Chaque produit téléchargé est enregistré dans un dossier au nom du produit.
+  </li>
+  <li>Les variantes sont rangées dans des sous-dossiers.</li>
+</ul>
+<p>Exemple :</p>
+<pre><code>WORKSPACE/
+ └── Acer-CB317-<span class="hljs-number">1</span>H-C7TP/
+        ├── <span class="hljs-selector-tag">details</span><span class="hljs-selector-class">.json</span>
+        ├── B0BPY9ZJX6/
+        │    ├── img1<span class="hljs-selector-class">.jpg</span>
+        │    ├── img2<span class="hljs-selector-class">.jpg</span>
+        │    └── ...
+        └── B0BDDHDZD4/
+             ├── img1<span class="hljs-selector-class">.jpg</span>
+             ├── img2<span class="hljs-selector-class">.jpg</span>
+             └── ...
+</code></pre>
+<hr />
+<p><strong>moussasamina</strong></p>
